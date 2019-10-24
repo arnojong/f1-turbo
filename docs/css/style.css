@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    overflow:hidden;
+    margin:0px; padding:0px;
+    background-color:#333;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@font-face {
+    src: url('../font/f1.ttf');
+    font-family: 'F1';
+}
+
+game {
+    width:100vw; height:100vh;
+    background-color:black;
+    overflow:hidden;
+}
+
+game * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+car {
+    width:397px;
+    height:194px;
+    background-image: url(../images/kmar.png);
+    cursor: pointer;
+}
+
+truck {
+    width:397px;
+    height:194px;
+    background-image: url(../images/truck.png);
+    cursor: pointer;
+}
+
+background {
+    width:100%; height:100%;
+    background-color: #0482ff;
+    background-image: url(../images/bg.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+#word {
+    display: inline-block;
+    color: #5E5E5E;
+    font: bold 20px arial;
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    margin-left: -20px;
+    margin-top: 2%;
+    padding: 15px 20px;
+    background: #EFF0F2;
+    border-radius: 4px;
+    border-top: 1px solid #F5F5F5;
+    box-shadow: inset 0 0 25px #E8E8E8, 0 1px 0 #C3C3C3, 0 2px 0 #C9C9C9, 0 2px 3px #333;
+    text-shadow: 0px 1px 0px #F5F5F5;
+}
+
+speed {
+    padding: 15px 20px;
+    display: inline-block;
+    color: white;
+    text-shadow: 0px 2px 0px black;
+    font: bold 30px arial;
+    position: absolute;
+}
+
+cloud {
+    background-image: url(../images/cloud.png);
+    width: 480px; height: 480px;
+    animation: movecloud 12s linear infinite;
+}
+
+tree {
+    background-image: url(../images/tree.png);
+    width: 192px; height: 408px;
+    animation: movetree 3s linear infinite;
+}
+
+.correct {
+    color: limegreen;
+}
+
+.dialog {
+    width: 800px;
+    height: 500px;
+  
+    z-index: 4;
+  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  
+    margin-left: -400px;
+    margin-top: -250px;
+  
+    background-color: coral;
+  
+    padding: 50px;
+    box-sizing: border-box;
+  
+    font-family: 'F1';
+  
+    text-align: center;
+  }
+  
+  .dialog h1 {
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    margin-bottom: 50px;
+    line-height: 60px;
+  }
+  
+  .dialog p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .dialog button {
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    background: #eb6b3c;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+  
+    z-index: 3;
+  
+    position: absolute;
+  
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+@keyframes movecloud {
+    from {
+        transform: translate(100vw, 50px)
+    }
+    to {
+        transform: translate(-30vw, 50px)
+    }
+}
+
+@keyframes movetree {
+    from {
+        transform: translate(100vw, 260px)
+    }
+    to {
+        transform: translate(-30vw, 260px)
+    }
+}
